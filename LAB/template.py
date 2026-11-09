@@ -25,6 +25,25 @@ Delete these instructions as you replace them with your code.
 
 # your class goes here
 
+class record:
+    over_limit_count = 0
+
+def __init__(self, label, value, limit):
+    self.label = label
+    self.value = value 
+    self.limit = limit
+
+if self.limit > 0 and (self.value / self.limit) >= 1.0:
+    Record.over_limit_count += 1
+
+ratio = self.value / self.limit
+if ratio >= 1.0:
+    return "over limit"
+elif ratio >= 0.9:
+    return "warning"
+else:
+    return "ok"
+
 
 # ==================================================================== RECORDS
 # 2. Create your records.
